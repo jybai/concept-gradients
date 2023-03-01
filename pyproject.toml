@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "concept-gradients"
+version = "0.0.1"
+authors = [
+  { name="Andrew Bai", email="andrewbai@cs.ucla.edu" },
+]
+description = "Implementation of Concept Gradients for feature interpretation."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    # "requests",
+    # 'importlib-metadata; python_version<"3.8"',
+    'argparse', 
+    'numpy', 
+    'pandas', 
+    'matplotlib', 
+    'pillow', 
+    'tabulate',
+    'tqdm',
+    'torch', 
+    'torchvision', 
+    'torchmetrics'
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jybai/concept-gradients"
+"Bug Tracker" = "https://github.com/jybai/concept-gradients/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+
+# [project.scripts]
+# train = "cg.train"
